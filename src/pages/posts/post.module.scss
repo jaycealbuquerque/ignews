@@ -59,7 +59,7 @@
   a {
     color: var(--yellow-500);
     margin-left: 0.5rem;
-    &:hover a {
+    &:hover {
       text-decoration: underline;
     }
   }
