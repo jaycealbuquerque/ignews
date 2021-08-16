@@ -6,13 +6,12 @@ import { SubscribeButton } from '.'
 
 
 jest.mock('next-auth/client');
-
 jest.mock('next/router');
 
 
 describe('SubscribeButton component ', () => {
   it('renders correctly', () => {
-    const useSessionMocked = mocked(useSession)
+    const useSessionMocked = mocked(useSession);
 
     useSessionMocked.mockReturnValueOnce([null, false])
 
@@ -54,7 +53,7 @@ describe('SubscribeButton component ', () => {
       false
     ])
 
-    useRouterMocked.mockRejectedValueOnce({
+    useRouterMocked.mockReturnValueOnce({
       push: pushMock
     } as any)
 
